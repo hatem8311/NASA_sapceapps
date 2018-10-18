@@ -10,9 +10,11 @@
     {%endblock%}
     <style>
 
-    .container{
-    background:black;
-    margin:auto;
+
+    .jumbotron{
+      background: white;
+      width: 790px;
+
     }
     </style>
   </head>
@@ -47,31 +49,42 @@
 
   {%block body%}
     {%for rocket in rockets%}
-    <div class="col-md-8">
 
-<div class="container">
+<div class="jumbotron">
+<h3>  {{rocket.rockets_name}} <br>
+</h3>
+      <p>
+          <font color= black ; size = '3'>
+             Launch Time:{{rocket.lanuch_window}} <br>
+             Launch window:{{rocket.launch_site}} <br> <br>
+             Description:{{rocket.description}}
 
-    <img style="float:right"
-    src="{{rocket.image.url}}" width="150" , height="150">
-    <p >
-<font color= white ; size='3'>
-      Rocket`s name: {{rocket.rockets_name}}
-</font>
-    </p>
+      </font>
+      </p>
 
-    <p>
-        <font color= white ; size = '3'>
-      Date of Launching: {{rocket.launching_time}}
-    </font>
 
-    </p>
-    <p >
-<font color= white ;size ='3'>
-  Mission: <a href="{{rocket.mission_url}}">{{rocket.mission}}</a>
-</font>
-    </p>
+    </div>
 
-  </div>
+
+
+
+
+
+
+    {%endfor%}
+
+      {%endblock%}
+
+
+
+  </body>
+  <script
+    src="https://code.jquery.com/jquery-3.3.1.min.js"
+    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+</html>
 
 
 
