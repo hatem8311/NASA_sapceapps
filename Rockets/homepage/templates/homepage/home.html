@@ -6,14 +6,15 @@
 <meta name="viewport" content="width=device-width , initial-scale=1.0">
     {%block head%}
     <meta charset="utf-8">
-    <title></title>
+    <title>NASA`s rocky room</title>
+    <link rel="icon" href="https://png.pngtree.com/element_pic/00/16/10/0257f08b717dfdc.jpg">
     {%endblock%}
     <style>
 
-
     .jumbotron{
       background: white;
-      width: 790px;
+      width: 1140px;
+
 
     }
     </style>
@@ -21,7 +22,7 @@
   <body background='https://d2v9y0dukr6mq2.cloudfront.net/video/thumbnail/BhBjRHe1Mj9qufshq/videoblocks-video-4k-animation-shinny-blue-stars-slowly-movement-in-black-galaxy-space-background-at-night_rlkmgjykg_thumbnail-full01.png'>
     <div   class="container">
       <br>
-      <nav class="navbar navbar-default">
+      <nav class="navbar navbar-inverse">
        <div class="container-fluid">
          <div class="navbar-header">
            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
@@ -30,13 +31,17 @@
              <span class="icon-bar"></span>
              <span class="icon-bar"></span>
            </button>
-           <a class="navbar-brand" href="/Rockets1/time">NASA`s Rocky room</a>
+           <a class="navbar-brand" href="/Rockets1/time">
+  <img  padding-bottom src="http://www.stickpng.com/assets/images/58429400a6515b1e0ad75acc.png" style="display: inline-block;width="50" height="40 ,padding-bottom= 50px;"">
+  <span style="display: inline-block;">NASA`s rocky room</span>
+</a>
+
          </div>
          <div id="navbar" class="navbar-collapse collapse">
 
            <ul class="nav navbar-nav navbar-right">
 
-             <li> <a href="">Satelites` Launching</a></li>
+             <li> <a href="">Vehicles</a></li>
              <li> <a href="/Rockets1/spaceports">world’s major spaceports</a></li>
 
            </ul>
@@ -50,18 +55,34 @@
   {%block body%}
     {%for rocket in rockets%}
 
+<div class="container">
+
 <div class="jumbotron">
-<h3>  {{rocket.rockets_name}} <br>
+
+
+  <img  class = "info" style="float:right;  border: 2px solid black;"
+src="{{rocket.image.url }}" width="200" , height="350" >
+
+<h3>  {{rocket.rockets_name}}  <br>
+
 </h3>
+<h3>Date: {{rocket.month}}</h3>
       <p>
           <font color= black ; size = '3'>
-             Launch Time:{{rocket.lanuch_window}} <br>
-             Launch window:{{rocket.launch_site}} <br> <br>
-             Description:{{rocket.description}}
+            Function: {{rocket.function}}<br>
+            Cost Per Launch :  {{rocket.cost_per_launch}}<br>
+             Launch Time: {{rocket.lanuch_window}} <br>
+             Launch site: {{rocket.launch_site}} <br>
+             Live video : <a href="{{rocket.url}}">url</a> <br>
+
+             Description: {{rocket.description}}
+
+
 
       </font>
       </p>
 
+    </div>
 
     </div>
 
@@ -76,7 +97,6 @@
       {%endblock%}
 
 
-
   </body>
   <script
     src="https://code.jquery.com/jquery-3.3.1.min.js"
@@ -84,23 +104,5 @@
     crossorigin="anonymous"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
-</html>
-
-
-
-  </div>
-
-    {%endfor%}
-
-      {%endblock%}
-
-
-
-  </body>
-  <script
-    src="https://code.jquery.com/jquery-3.3.1.min.js"
-    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-    crossorigin="anonymous"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
 </html>
