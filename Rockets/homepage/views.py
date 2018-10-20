@@ -11,3 +11,7 @@ def spaceports(request):
     spaceports=major_spaceports.objects.all()
     args={ 'spaceports':spaceports}
     return render(request,'homepage/spaceports.html' , args)
+
+
+def begin(request):
+    return redirect('/Rockets1/time')
